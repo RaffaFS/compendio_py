@@ -1,35 +1,3 @@
-##################################################
-##### LISTA GERAL DE SINTAXES DE MANIPULAÇÃO #####
-##################################################
-
-# Abaixo veremos em formato de lista todas as principais sintaxes de manipulação de
-# dados simples sem a utilização de funções integradas ou métodos explicitamente
-
-##############################
-### Indexação e fatiamento ###
-##############################
-
-obj[i]                      # Acessa o elemento no índice i
-obj[i:j]                    # Fatia do índice i até j (exclusivo)
-obj[i:j:k]             	    # Fatia com passo k
-obj[::-1]              	    # Inverte sequência
-obj[i] = valor      	    # Modifica posição i
-obj[i:j] = valores  	    # Substitui fati
-del obj[i]             	    # Remove item no índice i
-del obj[i:j]           	    # Remove fatia
-
-
-########################
-### Desenpacotamento ###
-########################
-
-grupo = [23, 21, 54, 46, 84]
-
-a, b, c = grupo	                                    # Atribui cada valor no grupo a uma variável
-a, _, b = grupo	                                    # Ignora valor com "_"
-a, b, *resto = grupo	                            # Captura o restante da sequência
-primeiro, *meio, ultimo = grupo	                    # Captura início, meio e fim
-primeiro, *meio, penultimo, ultimo = grupo	        # Captura início, meio e fim
 
 
 ##################################
@@ -83,36 +51,46 @@ primeiro, *meio, penultimo, ultimo = grupo	        # Captura início, meio e fim
 ######################
 
 int()                   # conversão para inteiro
-abs()                   # valor absoluto
-pow()                   # ou ** exponenciação
-divmod()                # retorna quociente e resto
-bit_length()            # número de bits necessários para representar o inteiro
-to_bytes()              # conversão para bytes
-from_bytes()            # (usado em nível baixo) conversão de bytes para inteiro
+abs()                   # valor absoluto (retorna sempre um número positivo ou zero) >>> abs(0) é 0, abs(3.2) é 3.2, abs(-4) é 4
+pow()                   # alternativa a "**" >>> pow(base, expoente) ou pow(base, expoente, módulo)
+divmod()                # alternativa a "//" e "%", divide e retorna quociente e resto de uma vez só >>> divmod(10, 3) é (3, 1)
+bit_length()            # número de bits necessários para representar o inteiro em binário >>> (casos específicos)
+to_bytes()              # conversão para bytes (casos específicos)
+from_bytes()            # conversão de bytes para inteiro (usado em nível baixo)
 
 ########################
 ### Decimais (float) ###
 ########################
 
 float()                 # conversão para float
-round()                 # arredondamento (com ou sem casas decimais)
-abs()                   # valor absoluto
-math.floor()            # arredondar para baixo (precisa importar math)
-math.ceil()             # arredondar para cima (precisa importar math)
-math.trunc()            # truncar parte decimal
-is_integer()            # verificar se o valor é inteiro
-as_integer_ratio()      # fração equivalente
+round()                 # arredondamento, round(valor, digitos pós ponto) >>> round(4.5) é 4, round(4.6) é 5, round(3.14159, 2) é 3.14
+abs()                   # valor absoluto (retorna sempre um número positivo ou zero) >>> abs(0) é 0, abs(3.2) é 3.2, abs(-4) é 4
+math.floor()            # (precisa importar math no arquivo) arredonda sempre para um valor absoluto para baixo >>> math.floor(4.761) é 4
+math.ceil()             # (precisa importar math no arquivo) arredonda sempre para um valor absoluto para cima >>> math.floor(6.161) é 7
+math.trunc()            # similar a round, mas esse apenas ignora a parte decimal do número e retorna a parte inteira
+.is_integer()           # verificar se o valor é inteiro (mesmo sendo float) >>> (2.00).is_integer() é True, (2.44).is_integer() é False
+as_integer_ratio()      # mostra a fração equivalente ao dado >>> 
+                        # (1.5).as_integer_ratio() é (3, 2) porque 3/2 = 1.5
+                        # (2.0).as_integer_ratio() é (2, 1) porque 2/1 = 2.0
+                        # (0.5).as_integer_ratio() é (1, 2) porque 1/2 = 0.5
+                        # (-0.5).as_integer_ratio() é (-1, 2) porque -1/2 = -0.5
+                        # (0.1).as_integer_ratio() é (3602879701896397, 36028797018963968) porque 3602879701896397/36028797018963968 = 0.1
 
 #####################
 ### Strings (str) ###
 #####################
 
-len()                   # tamanho da string
-str()                   # conversão para string
-.lower()                # minúsculas
-.upper()                # maiúsculas
-.strip()                # remove espaços extras das extremidades
-.split()                # separa em lista
+len()                   # retorna a quantidade de caracteres na string >>> len(dado)
+str()                   # conversão para string >>> str(dado)
+.lower()                # converte todos os caracteres para minúsculas >>> dado.lower()
+.upper()                # converte todos os caracteres para maiúsculas >>> dado.upper()
+.strip()                # remove espaços extras das extremidades >>> dado.strip()
+.split()                # separa um dado em partes e atribui os resultados em lista/array/tuple >>> 
+                        # dado.split() faz uma separação a cada espaço em branco na string
+                        # dado.split("/") faz separações a cada "/" na string (/ pode ser qualquer outro caractere)
+                        # dado.split(" ", 2) faz separações nos dois primeiros espaços em branco encontrados, então
+                        # dado = "um dois tres quatro cinco" ficaria no retorno: ['um', 'dois', 'tres quatro cinco']
+
 .replace()              # substitui partes
 .find()                 # / .index()                # localiza substring
 .join()                 # junta elementos de lista em string

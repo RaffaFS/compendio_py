@@ -66,7 +66,7 @@ print(apresentacao)
 email = "joaofeijao@gmail.com"
 
 print(f"indice 0: {email[0]}")          # Retornará "j"
-print(f"indice 10: {email[10]}")        # Retornará "@""
+print(f"indice 10: {email[10]}")        # Retornará "@"
 print(f"indice 0: {email[-1]}")         # Contado inversamente, sendo "-1" o último caractere. Retornará "m"
 print(f"indice 10: {email[-3]}")        # Contado inversamente, sendo "-3" o antepenultimo caractere. Retornará "c"
 
@@ -81,6 +81,12 @@ print(f"indice 10: {email[-3]}")        # Contado inversamente, sendo "-3" o ant
 # o valor do último índice, não será. Veja abaixo:
 
 print(f"indices de 0 a 10: {email[0:10]}")
+print(f"indices de 0 a 10: {email[10:20]}")
 
 # Veja só, apesar de termos visto que o valor armazenado no índice 10 é "@"
-# Aqui o retorno é "joaofeijao" e não "joaofeijao@"
+# O primeiro retorno é "joaofeijao" e não "joaofeijao@"
+
+# Já o segundo retorno, que também usa o índice 10, mas no começo, inclui
+# agora o "@", além disso, nosso último índice ocupado é o 19, mas como
+# quero incluir seu valor no resultado final, utilizo para a segunda posição
+# um índice acima dele.

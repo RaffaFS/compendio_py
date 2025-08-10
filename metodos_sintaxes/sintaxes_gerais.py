@@ -9,24 +9,29 @@
 ### Indexação e fatiamento ###
 ##############################
 
+# Funciona em strings, listas, tuplas, arrays, bytes, etc.
+
 obj[i]                      # Acessa o elemento no índice i
-obj[i:j]                    # Fatia do índice i até j (exclusivo)
+obj[i:j]                    # Fatia dos valores do índice i até j (não incluindo o j)
 obj[i:j:k]             	    # Fatia com passo k
 obj[::-1]              	    # Inverte sequência
-obj[i] = valor      	    # Modifica posição i
-obj[i:j] = valores  	    # Substitui fati
-del obj[i]             	    # Remove item no índice i
-del obj[i:j]           	    # Remove fatia
+obj[i] = valor      	    # Modifica o valor do índice i
+obj[i:j] = valores  	    # Modifica os valores da fatia
+del obj[i]             	    # Remove o valor no índice i
+del obj[i:j]           	    # Remove os valores na fatia
 
 
 ########################
 ### Desenpacotamento ###
 ########################
 
+# Pega um dado único e abstrai vários valores dele de uma única vez criando vários dados a parte
+
 grupo = [23, 21, 54, 46, 84]
 
-a, b, c = grupo	                                    # Atribui cada valor no grupo a uma variável
-a, _, b = grupo	                                    # Ignora valor com "_"
-a, b, *resto = grupo	                            # Captura o restante da sequência
-primeiro, *meio, ultimo = grupo	                    # Captura início, meio e fim
-primeiro, *meio, penultimo, ultimo = grupo	        # Captura início, meio e fim
+a, b, c = grupo	                                    # Atribui cada valor no grupo a uma variável descrita
+a, _, b = grupo	                                    # Atribui valores como a anterior mas Ignora valor com "_"
+a, b, *resto = grupo	                            # Captura o restante da sequência com *dado
+primeiro, *meio, ultimo = grupo	                    # Captura valor do primeiro indice, meio e valor do último índice
+primeiro, *meio, penultimo, ultimo = grupo	        # Captura valor do primeiro indice, meio, valor do penúltimo e do último índice
+
