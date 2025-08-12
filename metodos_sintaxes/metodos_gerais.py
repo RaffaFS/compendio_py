@@ -119,53 +119,96 @@ str()                   # conversão para string >>> str(dado)
 ### Booleanos (bool) ###
 ########################
 
-bool()                  # conversão para booleano
-any()                   # retorna True se algum elemento for verdadeiro
-all()                   # retorna True se todos os elementos forem verdadeiros
-isinstance()            # verificar tipo de dado
+# Aqui temos apenas um básico sobre booleanos, veremos mais em um documento separado e dedicado a eles
+
+bool()                  # conversão para booleano, tudo que existir será true e tudo que for vazio ou de valor 0 será falso
+any()                   # retorna True se algum elemento for verdadeiro >>> any(condição)
+all()                   # retorna True se todos os elementos forem verdadeiros >>> all(condição)
+isinstance()            # verificar se o dado é do tipo desejado >>> isinstance(dado, int)
 
 #####################
 ### Listas (list) ###
 #####################
 
-len()                   # tamanho da lista
-.append()               # adicionar elemento
-.extend()               # adicionar vários elementos
-.insert()               # inserir em posição específica
-.remove()               # remover pelo valor
-.pop()                  # remover por índice
-.sort()                 # ordenar (altera a lista)
-sorted()                # ordenar (retorna nova lista)
-.reverse()              # inverter lista
-.index()                # encontrar posição de um valor
+len()                   # retorna a quantidade de valores na list >>> len(lista)
+.append()               # adicionar elemento no final da list >>> lista.append(25) ou ("joao") ou ainda (lista2)
+                        # sim, podemos incluir uma lista dentro de outra, e ficaria mais ou menos assim:
+                        # lista = [25, "joao" [26, 27, 28]]
+
+.extend()               # adicionar vários elementos há uma lista >>> lista.extend(25) ou ("joao") ou ainda (lista2)
+                        # a sintaxe é a mesma de .append() mas o comportamento e retorno é diferente, teríamos aqui:
+                        # lista = [25, "j", "o", "a", "o", 26, 27, 28]
+
+.insert()               # inserir em posição específica com indice normal ou negativo >>> lista.insert(indice, valor)
+.remove()               # remover pelo valor >>> lista.remove(27) vai encontrar a primeira ocorrência de 27 e removê-lo
+.pop()                  # remover por índice >>> lista.remove(0) vai remover o primeiro item
+.sort()                 # ordena uma lista, necessário que todos os itens sejam comparáveis entre si
+                        # pode receber nenhum, um ou dois parâmetros >>>
+                        # lista.sort() vai ordenar conforme o tipo do dado, string ordena pelo alfabeto, int ou float pelo valor real
+                        # lista.sort(key=len) com esse parâmetro decidimos qual regra usamos para ordenar, nesse caso o comprimento
+                        # lista.sort(reverse=true) com esse parâmetro dizemos que queremos ordenar de forma decrescente
+
+sorted()                # cria uma nove lista ordenada com base em uma lista já existente que não queremos modificar
+                        # sorted(lista, reverse=true, key=len)
+
+.reverse()              # inverter a posição dos valores em uma lista
+.reversed()             # se usado com "list" retorna uma nova lista invertida com base na lista usada >>> list(reversed(lista))
+.index()                # encontrar posição de um valor, podendo receber dois argumentos que definem o intervalo onde será procurado
+                        # ele encontrará e trará apenas a primeira ocorrência no retorno
+                        # lista.index("ana", 0, 4) aqui definimos que "ana" deve ser procurada nos índices 0, 1, 2 e 3
+                        # é importante perceber aqui o comportamento de fatiamento, que utiliza o primeiro índice normal e o último -1
+                        # lista.index("ana", 6, len(lista)) é uma alternativa para pegarmos a lista até o fim sem correr o risco do -1
+
 .count()                # conta ocorrências passadas >>> lista.count(2) vai retornar o número de vezes que o número 2 aparece na lista
-list()                  # conversão para lista
-min()                   # menor elemento 
-max()                   # maior elemento
-sum()                   # soma elementos numéricos
+list()                  # cria uma lista a partir de outro elemento iterável, como fizemos acima com reversed() >>>
+                        # print(list("abc")) retorna ['a', 'b', 'c']
+                        # print(list(range(4))) retorna [0, 1, 2, 3]
+
+min()                   # retorna o menor elemento
+max()                   # retorna o maior elemento
+
+                        # ambos os métodos/funções acima, trarão números por seu valor real ou strings por ordem alfabética,
+                        # com exceção de casos onde usemos uma key, por exemplo "len", nesse caso trarão de acordo com o comprimento
+                        # >>> min("joao", "maria", "ana"), max(3, 1, 8), min(numeros), max(palavras), min(palavras, key=len)...
+
+sum()                   # soma elementos numéricos e apenas numéricos >>> sum(lista), ou sum(lista1 + lista2) ou sum(range(5))
 
 ######################
 ### Tuplas (tuple) ###
 ######################
 
-len()                   # tamanho da tupla
+len()                   # retorna a quantidade de valores na tupla >>> len(lista)
 tuple()                 # conversão para tupla
 .count()                # conta ocorrências passadas >>> tupla.count("azul") vai retornar o número de vezes que "azul" aparece na lista
-.index()                # encontrar posição
-min()                   # menor elemento 
-max()                   # maior elemento
+.index()                 # encontrar posição de um valor, podendo receber dois argumentos que definem o intervalo onde será procurado
+min()                   # retorna o menor elemento
+max()                   # retorna o maior elemento
+
+                        # ambos os métodos/funções acima, trarão números por seu valor real ou strings por ordem alfabética,
+                        # com exceção de casos onde usemos uma key, por exemplo "len", nesse caso trarão de acordo com o comprimento
+                        # >>> min("joao", "maria", "ana"), max(3, 1, 8), min(numeros), max(palavras), min(palavras, key=len)...
 
 ##########################
 ### Dicionários (dict) ###
 ##########################
 
-.get()                  # obtém valor sem erro se não existir
-.keys()                 # retorna chaves
-.values()               # retorna valores
-.items()                # retorna pares (chave, valor)
-.update()               # atualiza/adiciona elementos
-.pop()                  # remove chave
-.popitem()              # remove último item
-.clear()                # limpa dicionário
-.setdefault()           # define valor se chave não existir
+# Dicionários são estruturas similares aos objetos em JS, com uma sintaxe ligeiramente diferente
+
+.get()                  # obtém valor solicitado, retorna "None" se não existir, também pode receber um segundo parâmentro opcional
+                        # dicionario.get(nome) ou dicionario.get(nome, "Sem nome"), nesse segundo caso, se a key "nome" não existir
+                        # ao invés de None, será retornado "Sem nome"
+
+.keys()                 # retorna todas as chaves de um dicionário >>> dicionario.keys()
+.values()               # retorna todos os valores de um dicionário >>> dicionario.values()
+.items()                # retorna todos os pares de um dicionário (chave, valor) >> dicionario.items()
+.update()               # atualiza elementos se já existirem ou adiciona novos caso não >>>
+                        # dicionario.update({'idade': 31})
+                        # dicionario.update(profissao='Desenvolvedor', altura=1.80)
+
+.pop()                  # remove chave e pode receber valor padrão no caso de já não existir >>> dicionario.pop('idade', Nulo)
+.popitem()              # remove último item >>> dicionario.popitem()
+.clear()                # limpa o dicionário, deixando vazio >>> dicionario.clear()
+.setdefault()           # procura por uma chave, se existir retorna seu valor, se não, cria a mesma e atribui o valor passado >>>
+                        # dicionario.setdefault('nome', 'desconhecido')
+
 dict()                  # conversão para dicionário

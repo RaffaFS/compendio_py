@@ -1,3 +1,5 @@
-nome = "Lucas"
+d = {'nome': 'João', 'idade': 25}
 
-print(nome.center(6, "-"))
+idade = d.pop('idade')
+print(idade)  # 25
+print(d)      # {'nome': 'João'}
