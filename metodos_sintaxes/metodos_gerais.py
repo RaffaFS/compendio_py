@@ -85,39 +85,44 @@ str()                   # conversão para string >>> str(dado)
 .lower()                # converte todos os caracteres para minúsculas >>> dado.lower()
 .upper()                # converte todos os caracteres para maiúsculas >>> dado.upper()
 .strip()                # remove espaços extras das extremidades >>> dado.strip()
-.split()                # separa um dado em partes e atribui os resultados em lista/array/tuple >>> 
-                        # dado.split() faz uma separação a cada espaço em branco na string
+.split()                # separa um dado em partes e atribui os resultados em uma list >>> 
+                        # dado.split() faz uma separação a cada espaço em branco na string 
                         # dado.split("/") faz separações a cada "/" na string (/ pode ser qualquer outro caractere)
                         # dado.split(" ", 2) faz separações nos dois primeiros espaços em branco encontrados, então
                         # dado = "um dois tres quatro cinco" ficaria no retorno: ['um', 'dois', 'tres quatro cinco']
 
-.replace()              # substitui partes
-.find()                 # / .index()                # localiza substring
-.join()                 # junta elementos de lista em string
-.startswith()           # verifica prefixo
-.endswith()             # verifica sufixo
-.capitalize()           # primeira letra maiúscula
-.title()                # primeira letra de cada palavra maiúscula
-.count()                # conta ocorrências
-.isalpha()              # verifica apenas letras
-.isdigit()              # verifica apenas números
-.isalnum()              # verifica letras e números
+.replace()              # substitui partes >>> .replace("Velho, novo")
+.find()                 # localiza substring e retorna o índice da primeira letra >>> .find("mundo")
+.index()                # localiza substring e retorna o índice da primeira letra >>> .index("mundo")
+
+                        # A diferença entre .find() e .index() está no erro, o primeiro retornará -1 e o segundo um erro literal
+
+.join()                 # junta elementos de lista (que sejam do tipo string) em uma string única >>> "separador".join(lista) 
+.startswith()           # verifica se a string começa com os caracteres passados >>> .startswith("Lu") 
+.endswith()             # verifica se a string termina com os caracteres passados >>> .startswith("cas") 
+.capitalize()           # coloca em maiúsculo a primeira letra da string e todas as outras minúsculas
+.title()                # coloca em maiúsculo a primeira letra de cada palavra na string
+.count()                # conta ocorrências passadas >>> frase.count("a") vai retornar quantos "as" há na frase
+.isalpha()              # verifica se todos os caracteres da string são letras do alfabeto (sem espaços, números ou símbolos)
+.isdigit()              # verifica se todos os caracteres da string são números de 0 a 9 (sem letras, ponto, vírgula ou sinais)
+.isalnum()              # mistura dos dois acima, verifica se todos os caracteres da string são letras ou números
 .swapcase()             # inverte maiúsculas/minúsculas
-.center()               # centraliza string
-.ljust()                # alinhamento esquerdo 
-.rjust()                # alinhamento direito
+.center()               # centraliza string num espaço definido >>> se texto = Python
+                        # texto.center(12) retorna '   Python   '
+                        # isso se dá porque Python tem 6 letras e para 12 são mais 6 que dividido entre L e R são 3 espaços pra cada
+                        # então texto.center(14, "-") retorna '----Python----'
+
+.ljust()                # Segue o mesmo padrão de .center(), mas aqui a o espaço ou caractere passado é aplicado apenas a direita
+.rjust()                # Segue o mesmo padrão de .center(), mas aqui a o espaço ou caractere passado é aplicado apenas a esquerda
 
 ########################
 ### Booleanos (bool) ###
 ########################
 
 bool()                  # conversão para booleano
-Operadores and, or, not lógica booleana
 any()                   # retorna True se algum elemento for verdadeiro
 all()                   # retorna True se todos os elementos forem verdadeiros
-
-Comparações (==, !=, <, >, <=, >=)
-isinstance()                    # verificar tipo de dado
+isinstance()            # verificar tipo de dado
 
 #####################
 ### Listas (list) ###
@@ -133,7 +138,7 @@ len()                   # tamanho da lista
 sorted()                # ordenar (retorna nova lista)
 .reverse()              # inverter lista
 .index()                # encontrar posição de um valor
-.count()                # contar ocorrências
+.count()                # conta ocorrências passadas >>> lista.count(2) vai retornar o número de vezes que o número 2 aparece na lista
 list()                  # conversão para lista
 min()                   # menor elemento 
 max()                   # maior elemento
@@ -145,7 +150,7 @@ sum()                   # soma elementos numéricos
 
 len()                   # tamanho da tupla
 tuple()                 # conversão para tupla
-.count()                # contar ocorrências
+.count()                # conta ocorrências passadas >>> tupla.count("azul") vai retornar o número de vezes que "azul" aparece na lista
 .index()                # encontrar posição
 min()                   # menor elemento 
 max()                   # maior elemento

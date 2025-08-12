@@ -1,3 +1,3 @@
-nome = "Rafael"
+nome = "Lucas"
 
-print(nome.lower())
+print(nome.center(6, "-"))
