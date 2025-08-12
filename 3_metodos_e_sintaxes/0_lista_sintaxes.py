@@ -1,3 +1,8 @@
+# Nessa pasta teremos primeiro um entendimento sobre métodos e então depois estarei
+# deixando uma lista completa com todos os métodos e funções integradas nativas do Python
+# mas de início é interessante conhecermos também o que podemos fazer apenas com
+# sintaxes da linguagem, sem o uso de métodos ou funções
+
 ##################################################
 ##### LISTA GERAL DE SINTAXES DE MANIPULAÇÃO #####
 ##################################################

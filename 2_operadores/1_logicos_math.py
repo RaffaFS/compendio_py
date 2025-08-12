@@ -1,3 +1,5 @@
+# Aqui veremos os operadores lógicos matemáticos
+
 #############################
 ##### OPERAÇÕES BÁSICAS #####
 #############################

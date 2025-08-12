@@ -2,6 +2,9 @@
 # para fazer uma manipulação mais precisa de um tipo de dado.
 # Lembre, falando de Strings, maiúscula e minúscula tem diferença!
 
+# Aqui veremos sobre métodos apenas o suficiente para nos familiarizarmos
+# nos arquivos a seguir teremos listas de métodos explicados com exemplos
+
 #############################
 ##### MÉTODOS DE STRING #####
 #############################

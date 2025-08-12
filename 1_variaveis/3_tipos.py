@@ -1,4 +1,4 @@
-# Todo tipo pode ser convertido através das funções corretas, veja:
+# Aqui vamos da inicio a algumas manipulações de dados básicas
 
 #####################################
 ##### CONVERSÃO ENTRE NUMÉRICOS #####
