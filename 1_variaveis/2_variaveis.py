@@ -1,4 +1,6 @@
-# (complex) tipo numérico complexo
+#################
+### (complex) ### tipo numérico complexo
+#################
 ponto = 2 + 4j
 print(ponto)
 print(type(ponto))
@@ -14,8 +16,9 @@ print("//////////////////////////////////////////////////")
 # Tomando o exemplo do plano cartesiano, a primeira parte representa o "eixo X" enquanto a segunda
 # parte (que sempre acompanha a letra "j") representa o "eixo Y" 
 
-
-# (tuple) tipo lista
+###############
+### (tuple) ### tipo lista
+###############
 coordenadas = (10, 20)
 print(coordenadas)
 print(type(coordenadas))

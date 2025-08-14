@@ -20,14 +20,20 @@ print("//////////////////////////////////////////////////")
 # mas abaixo vamos entender quais são os tipos nativos do python com a
 # ajuda da função "type" que trará no terminal o tipo do dado invocado
 
-# (int) tipo numérico inteiro
+
+#############
+### (int) ### tipo numérico inteiro
+#############
 preco1 = 100
 tipo_preco1 = type(preco1)
 print(preco1)
 print(tipo_preco1)
 print("//////////////////////////////////////////////////")
 
-# (float) tipo numérico decimal
+
+###############
+### (float) ### tipo numérico decimal
+###############
 preco2 = 97.90
 tipo_preco2 = type(preco2)
 print(preco2)
@@ -37,20 +43,29 @@ print("//////////////////////////////////////////////////")
 # Acima fiz o armazenamento dos tipos dos meus dados em outro dado, outra variável
 # Note que abaixo farei uso de type diretamente no print sem armazená-lo
 
-# (str) tipo texto string
+
+#############
+### (str) ### tipo texto string
+#############
 pais = "Brasil"
 print(pais)
 print(type(pais))
 print("//////////////////////////////////////////////////")
 
-# (bool) tipo lógico booleano
+
+##############
+### (bool) ### tipo lógico booleano
+##############
 # em sua declaração de valor a primeira letra deve ser maiúscula
 usuario_maior_de_idade = False
 print(usuario_maior_de_idade)
 print(type(usuario_maior_de_idade))
 print("//////////////////////////////////////////////////")
 
-# (NoneType) tipo vazio
+
+##################
+### (NoneType) ### tipo vazio
+##################
 # um tipo vazio é ainda um dado com valor, o valor "vazio"
 # não confunda com um dado inexistente.
 # Para tipo "NoneType" pode-se imaginar basicamente um campo de input que não foi preenchido
