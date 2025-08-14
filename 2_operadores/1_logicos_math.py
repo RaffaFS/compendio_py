@@ -1,61 +1,53 @@
 # Aqui veremos os operadores lógicos matemáticos
+# Para operações mais complexas é interessante saber que existe uma "ORDEM DE PRIORIDADE"
+# para a resolução de equações com esses operadores
+
+# ORDEM DE PRIORIDADE: "**", "+X e -X", "* e / e // e %", "+ e -" 
 
 #############################
 ##### OPERAÇÕES BÁSICAS #####
 #############################
 
-# Definindo variável
-carrinho1 = 0
+X + Y       # Adição
+X - Y       # Subtração
+X * Y       # Multiplicação
+X / Y       # Divisão
 
-# Operador de soma
-carrinho1 = 1 + 1
-print(carrinho1)
-
-# Operador de subtração
-carrinho1 = 4 - 1
-print(carrinho1)
-
-# Operador de multiplicação
-carrinho1 = 5 * 5
-print(carrinho1)
-
-# Operador de divisão
-carrinho1 = 100 / 10
-print(carrinho1)
+# As quatro acima são as operações mais básicas e fundamentais, dispensam explicações
 
 
 ###############################
 ##### OPERAÇÕES AVANÇADAS #####
 ###############################
 
-# Operador de potência ou exponenciação
-# Não há muito o que comentar aqui, o primeiro número (base) será elevado a potência do segundo número (expoente)
-itens = 3 ** 3
-print(itens)
+X ** Y      # Potência 
+            # O primeiro número (base) será elevado a potência do segundo número (expoente)
 
-# Operador de divisão inteira
-# Além de realizar uma divisão, caso ela tenha como resultado um decimal, esse operador
-# automaticamente arredonda o resultado para o inteiro mais próximo para baixo
-# Nos casos abaixo o resultado seria respectivamente 1.5 e 2.347...
-# Mas se tratando de "//", os resultados respectivos serão 1 e 2.0
-# Observe também que, apesar de o segundo resultado ser um número inteiro matemáticamente falando,
-# aqui ele retorna com .0 graças aos valores originais da operação, assim sendo tratado como "float"
-itens = 3 // 2
-print(itens)
-itens = 5.4 // 2.3
-print(itens)
+X // Y      # Divisão inteira. 
+            # Além de realizar uma divisão, caso ela tenha como resultado um decimal, esse operador automaticamente 
+            # arredonda o resultado para o inteiro mais próximo para baixo, tratando como int se os valores originais 
+            # forem int e tratando como float se ao menos um dos valores originais for float
 
-# Operador de resto de divisão
-# Esse operador realiza uma divisão inteira e, ao invés de nos retornar o resultado dessa operação
-# ele nos retorna o resto da mesma. Por exemplo, no primeiro caso abaixo temos uma divisão exata
-# sem restos (retorna 0), nos outros dois temos divisões com sobras (retornam 1 e 0.8 respectivamente)
-itens = 6 % 3
-print(itens)
-itens = 3 % 2
-print(itens)
-itens = 5.4 % 2.3
-print(itens)
+X % Y       # Resto de divisão
+            # Esse operador realiza uma divisão inteira e, ao invés de nos retornar o resultado dessa operação
+            # ele nos retorna o resto da mesma. No caso de ser uma divisão exata retorna 0
 
+
+##########################
+##### SINAIS UNÁRIOS #####
+##########################
+
+# Estes sinais são sinais soltos que trabalham entre si antes de afetarem diretamente uma equação
+
+a = 2
+b = -2
+
+print(+a)       # retorna 2 pois ++2 == 2
+print(-a)       # retorna -2 pois -+2 == -2
+print(+b)       # retorna -2 pois +-2 == 2
+print(-b)       # retorna 2 pois --2 == 2
+
+# É a velha regrinha do "dois iguais da positivo mas um diferente da negativo"
 
 #####################################
 ##### ATRIBUIÇÕES COM OPERAÇÕES #####

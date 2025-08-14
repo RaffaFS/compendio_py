@@ -1,5 +1,4 @@
-d = {'nome': 'João', 'idade': 25}
+a = 2
+b = -2
 
-idade = d.pop('idade')
-print(idade)  # 25
-print(d)      # {'nome': 'João'}
+print(+-+b)
