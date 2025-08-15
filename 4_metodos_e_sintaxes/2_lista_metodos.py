@@ -188,6 +188,36 @@ max()                   # retorna o maior elemento
                         # com exceção de casos onde usemos uma key, por exemplo "len", nesse caso trarão de acordo com o comprimento
                         # >>> min("joao", "maria", "ana"), max(3, 1, 8), min(numeros), max(palavras), min(palavras, key=len)...
 
+#######################
+### Conjuntos (set) ###
+#######################
+
+# Conjuntos ou sets são estruturas similares a list, mutáveis, mas que não possuem ordem (índice) e não permitem duplicatas
+# além disso, só aceitam dados não mutáveis, como strings, int, float, bool e tuple, mas não list, por exemplo
+
+.add(elem)                                      # Adiciona um elemento ao fim da lista desde que não seja uma duplicata
+.remove(elem)                                   # Remove exatamente o elemento informado. Retorna erro se ele não existir.
+.discard(elem)                                  # Remove exatamente o elemento informado. Não retorna erro algum.
+.pop()                                          # Remove um elemento aleatório do set e retorna ele. Erro se o set estiver vazio.
+.clear()                                        # Remove todos os elementos do set, mas ele continua existindo vazio.
+.update(iterável)                               # Adiciona vários elementos a partir de um iterável ao set, isso é, a partir
+                                                # de outro set, lista, tupla ou string. Ignora duplicatas.
+
+.union(iterável)                                # Retorna um novo set combinando os elementos do set original e do iterável
+                                                # não contabilizando duplicatas
+
+.intersection(iterável)                         # Retorna um novo set com os elementos em comum do set original e do iterável
+.difference(iterável)                           # Retorna um novo set com os elementos presentes no set original 
+                                                # e não presentes no iterável
+
+.symmetric_difference(iterável)                 # Retorna um novo set com uma combinação dos elementos únicos de cada set
+.intersection_update(iterável)                  # Modifica o set original mantendo apenas os elementos em comum entre os sets
+.difference_update(outro_set)                   # Remove do set original todos os elementos que também estão no iterável
+.symmetric_difference_update(outro_set)         # Modifica o set original mantendo apenas os elementos únicos de cada set
+.issubset(outro_set)                            # Retorna True se todos os elementos do set original estiverem contidos no iterável
+.issuperset(outro_set)                          # Retorna True se todos os elementos do iterável estiverem contidos no set original
+.isdisjoint(outro_set)                          # Retorna True se o set original e o iterável não tiverem elementos em comum
+
 ##########################
 ### Dicionários (dict) ###
 ##########################

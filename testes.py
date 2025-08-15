@@ -1,4 +1,6 @@
-a = 2
-b = -2
+set1 = {1,2,3,4}
+set2 = {3,4,5,6}
 
-print(+-+b)
+print(set1 - set2)
+print(set2 - set1)
+print(set2 | set1)
