@@ -229,7 +229,11 @@ max()                   # retorna o maior elemento
                         # ao invés de None, será retornado "Sem nome"
 
 .keys()                 # retorna todas as chaves de um dicionário >>> dicionario.keys()
+                        # muito usado com conversão para listas >>> chaves = list(dicionario.keys())
+
 .values()               # retorna todos os valores de um dicionário >>> dicionario.values()
+                        # muito usado com conversão para listas >>> valores = list(dicionario.values())
+
 .items()                # retorna todos os pares de um dicionário (chave, valor) >> dicionario.items()
 .update()               # atualiza elementos se já existirem ou adiciona novos caso não >>>
                         # dicionario.update({'idade': 31})
