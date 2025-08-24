@@ -32,6 +32,10 @@ X % Y       # Resto de divisão
             # Esse operador realiza uma divisão inteira e, ao invés de nos retornar o resultado dessa operação
             # ele nos retorna o resto da mesma. No caso de ser uma divisão exata retorna 0
 
+# EXTRA:
+
+X ** 0.5    # Raiz quadrada 
+            # O operador de potência com o expoente 0.5 retorna a raiz quadrada do número base
 
 ##########################
 ##### SINAIS UNÁRIOS #####
