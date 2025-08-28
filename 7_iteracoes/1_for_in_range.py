@@ -5,7 +5,7 @@
 ##### FOR IN #####
 ##################
 
-# Em python, nossos laços são formados sempre por for e in e, as vezes, por range
+# Em python, nossos laços são formados por for e in e, as vezes, por range
 # explicitamente, nas outras, implicitamente
 
 nomes = ['André', 'Bruno', 'Carlos', 'Jubileu']

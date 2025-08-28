@@ -65,9 +65,11 @@ from_bytes()            # conversão de bytes para inteiro (usado em nível baix
 float()                 # conversão para float
 round()                 # arredondamento, round(valor, digitos pós ponto) >>> round(4.5) é 4, round(4.6) é 5, round(3.14159, 2) é 3.14
 abs()                   # valor absoluto (retorna sempre um número positivo ou zero) >>> abs(0) é 0, abs(3.2) é 3.2, abs(-4) é 4
-math.floor()            # (precisa importar math no arquivo) arredonda sempre para um valor absoluto para baixo >>> math.floor(4.761) é 4
-math.ceil()             # (precisa importar math no arquivo) arredonda sempre para um valor absoluto para cima >>> math.floor(6.161) é 7
-math.trunc()            # similar a round, mas esse apenas ignora a parte decimal do número e retorna a parte inteira
+pow()                   # alternativa a "**" >>> pow(base, expoente) ou pow(base, expoente, módulo)
+math.floor()            # (importar math) arredonda sempre para um valor absoluto para baixo >>> math.floor(4.761) é 4
+math.ceil()             # (importar math) arredonda sempre para um valor absoluto para cima >>> math.floor(6.161) é 7
+math.trunc()            # (importar math) similar a round, mas esse apenas ignora a parte decimal do número e retorna a parte inteira
+math.sqrt()             # (importar math) traz a raiz quadrada com ponto flutuantee >>> math.sqrt(16) é 4
 .is_integer()           # verificar se o valor é inteiro (mesmo sendo float) >>> (2.00).is_integer() é True, (2.44).is_integer() é False
 as_integer_ratio()      # mostra a fração equivalente ao dado >>> 
                         # (1.5).as_integer_ratio() é (3, 2) porque 3/2 = 1.5
@@ -103,6 +105,9 @@ str()                   # conversão para string >>> str(dado)
 .capitalize()           # coloca em maiúsculo a primeira letra da string e todas as outras minúsculas
 .title()                # coloca em maiúsculo a primeira letra de cada palavra na string
 .count()                # conta ocorrências passadas >>> frase.count("a") vai retornar quantos "as" há na frase
+                        # frase.count("a", 10) vai retornar a quantidade de "as" na frase a partir do índice 10
+                        # frase.count("a", 10, 28) vai fazer o mesmo do índice 10 ao 28-1
+
 .isalpha()              # verifica se todos os caracteres da string são letras do alfabeto (sem espaços, números ou símbolos)
 .isdigit()              # verifica se todos os caracteres da string são números de 0 a 9 (sem letras, ponto, vírgula ou sinais)
 .isalnum()              # mistura dos dois acima, verifica se todos os caracteres da string são letras ou números
