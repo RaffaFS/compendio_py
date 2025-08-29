@@ -42,7 +42,6 @@ if senha_armazenada != senha_input:
 else:
     print('Senha correta 2')
 
-
 ################
 ##### ELIF #####
 ################

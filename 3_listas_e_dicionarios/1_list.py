@@ -35,3 +35,19 @@ print(usuarioo)
 # Alteração de valor específico
 usuarios[2] = "Tiburcio"
 print(usuarios)
+
+# Algo interessante de citar é que podemos ter listas dentro de listas então
+# a chamada de seus dados tem uma estrutura um pouco diferente
+
+pessoas = [['Ana', 29], ['Bento', 31], ['Enzo', 22]]
+print(pessoas[2][1])
+
+# O resultado do print acima será 22, pois digo para ir em pessoas, buscar o 
+# índice 2 que é a terceira lista e então dentro dessa lista buscar o índice
+# 1 que é o segundo valor
+
+# Nessa mesma estrutura poderíamos, por exemplo, ter uma lista, dentro de uma
+# lista, dentro de uma lista, dentro de uma lista (e assim por diante)
+
+# A chamada de um dado único na camada mais interna seria algo como
+# lista[i][i][i][i] (e assim por diante)

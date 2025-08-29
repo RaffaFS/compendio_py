@@ -56,12 +56,3 @@ soma(12.3, 1.1)
 # No caso acima criei uma função que tem "dois slots de parâmetros", para que a
 # minha função possa ser executada corretamente eu devo precher esses dois slots
 # sempre que fizer a invocação dessa função como fiz nos 3 exemplos
-
-# Existe uma sintaxe para os parâmetros onde não precisso definir a quantidade
-# exata de parâmetros
-
-def soma2(*num):
-    print(num)
-
-soma2(0,1,3,4,3,1)
-soma2(3,2)

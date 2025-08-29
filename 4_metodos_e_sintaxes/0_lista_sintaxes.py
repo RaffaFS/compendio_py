@@ -20,6 +20,7 @@ obj[i]                      # Acessa o elemento no índice i
 obj[i:j]                    # Fatia dos valores do índice i até j (não incluindo o j)
 obj[i:j:k]             	    # Fatia com passo k
 obj[::-1]              	    # Inverte sequência
+obj[:]                      # cria uma cópia dos valores atuais de obj sem dependências com alterações futuras do dado original
 obj[i] = valor      	    # Modifica o valor do índice i
 obj[i:j] = valores  	    # Modifica os valores da fatia
 del obj[i]             	    # Remove o valor no índice i

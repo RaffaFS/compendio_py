@@ -120,6 +120,13 @@ str()                   # conversão para string >>> str(dado)
 .ljust()                # Segue o mesmo padrão de .center(), mas aqui a o espaço ou caractere passado é aplicado apenas a direita
 .rjust()                # Segue o mesmo padrão de .center(), mas aqui a o espaço ou caractere passado é aplicado apenas a esquerda
 
+# Para os casos de center(), ljust() e rjust() também temos alternativas para trabalharmos diretamente com a string no print ao invés
+# de termos que armazená-la em uma variável antes. Considerando "30" o espaço total, isso seria das seguintes maneiras
+
+# print(f'{"Olá Mundo":^30}')                       para .center
+# print(f'{"Olá Mundo":<30}')                       para .ljust
+# print(f'{"Olá Mundo":>30}')                       para .rjust
+
 ########################
 ### Booleanos (bool) ###
 ########################
