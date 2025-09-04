@@ -9,12 +9,12 @@
 
 # de início vamos diferenciar métodos de funções integradas. 
 
-# Métodos são aqueles que na sintaxe correta começam com "." e são utilizados na 
+# MÉTODOS são aqueles que na sintaxe correta começam com "." e são utilizados na 
 # sequência do dado, como: 
 # "texto.upper()"                   # Deixa toda a string em caixa alta
 # "texto.find('parâmetro')"         # Encontra na string o conjunto de caracteres passado
 
-# Funções integradas são aquelas que vem antes do dado e carregam o mesmo dentro
+# FUNÇÕES INTEGRADAS são aquelas que vem antes do dado e carregam o mesmo dentro
 # de (""), como: 
 #"int(longitude)"                       # Transforma a string em inteiro
 

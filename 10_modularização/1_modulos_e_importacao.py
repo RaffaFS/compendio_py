@@ -31,7 +31,7 @@ print('Olá mundo')
 # chamar "biblioteca.módulo()"
 
 # importando módulo sleep que pertece a biblioteca time
-import sleep from time
+from time import sleep
 sleep(3)
 print('Olá mundo')
 # no caso acima, como importamos apenas um módulo da biblioteca time, chamamos

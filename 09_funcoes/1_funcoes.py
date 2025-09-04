@@ -44,6 +44,9 @@ linha()
 ##################################
 
 # Toda função pode receber parâmetros da seguinte maneira: "def funcao(parametro):"
+# É importante saber diferenciar os parâmetros formais dos parâmetros reais.
+# Parâmetros formais são aqueles que passamos na criação da função
+# Parâmetros reais são os verdadeiros valores que são passados na invocação da função mais abaixo
 
 def soma(a, b):
     res = a + b
