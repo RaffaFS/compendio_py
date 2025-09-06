@@ -3,7 +3,7 @@
 #############################
 
 # 'r' abre o arquivo apenas para leitura e apresenta erro se o arquivo não existir
-# 'w' abre o arquivo para sobrescrição ou cria um novo se o arquivo não existir ou não for encontrado, não permite leitura
+# 'w' abre o arquivo e zera seu conteúdo ou cria um novo se o arquivo não existir ou não for encontrado, permite escrita mas não leitura
 # 'x' cria um arquivo único e gera erro se já existir um com o mesmo nome, permite escrita mas não leitura
 # 'a' abre o arquivo para escrever no final dele (append), mas não permite leitura
 
@@ -29,9 +29,3 @@
 
 # 'b' >>> 'rb' ou 'wb' >>> Usa o modo binário, mais comumente usado para arquivos como imagens, vídeos, áudios,
 #                          PDFs... Trabalha com bytes ao invés de strings e não intetpreta codificação e quebras
-
-####################
-##### ENCODING #####
-####################
-
-# Antes de falarmos sobre encoding veja isso
