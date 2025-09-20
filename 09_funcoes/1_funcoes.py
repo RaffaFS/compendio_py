@@ -76,7 +76,7 @@ soma2(3,2)
 
 # No algoritmo eu imprimo os valores recebidos e logo depois a soma dos mesmos
 
-def dobra(lista):
+def dobra(lista: list):
     indice = 0
     while indice < len(lista):
         dobrados.append(lista[indice] * 2)
@@ -93,7 +93,12 @@ dobra(numeros)
 # mas é importante sabermos que as listas passadas após ele já foram imaginadas
 # antes da sua construção
 
-# 1. Defino a função com um parâmetro normalmente (e que receberá a lista "numeros")
+# 1. Defino a função com um parâmetro que receberá a lista "numeros", note que utilizo "parametro: tipo"
+#    isso é uma "type hint" ou "dica de tipo", ela não altera absolutamente nada o funcionamento do código
+#    mas funciona como uma anotação para outros programadores e ferramentas externas indicando o tipo 
+#    do dado que se espera como argumento. Caso eu tivesse mais de um argumento poderia descrever eles com
+#    dicas de tipo assim: (nome: str, idade: int)
+
 # 2. Defino uma variável que armazenará 0, ela incrementará a cada laço, funcionando como índice de "numeros"
 # 3. Crio um laço que diz que enquanto "indice" for menor que o comprimento total do parâmetro, ele deve rodar
 # 4. Digo que quero acrescentar a "dobrados" o dobro do valor referente ao índice de "numeros" atualmente em vigor no laço

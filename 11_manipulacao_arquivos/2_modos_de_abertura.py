@@ -2,19 +2,22 @@
 ##### MODOS DE ABERTURA #####
 #############################
 
-# 'r' abre o arquivo apenas para leitura e apresenta erro se o arquivo não existir
-# 'w' abre o arquivo e zera seu conteúdo ou cria um novo se o arquivo não existir ou não for encontrado, permite escrita mas não leitura
+# 'r' abre o arquivo mantendo o conteúdo e apresenta erro se o arquivo não existir, permite leitura mas não escrita
+# 'w' abre o arquivo e destrói seu conteúdo atual ou cria um novo se o arquivo não existir ou não for encontrado, 
+#     permite escrita mas não leitura
 # 'x' cria um arquivo único e gera erro se já existir um com o mesmo nome, permite escrita mas não leitura
-# 'a' abre o arquivo para escrever no final dele (append), mas não permite leitura
+# 'a' abre o arquivo mantendo o conteúdo, permite escrita mas não leitura, a escrita será feita sempre no fim
+#     do arquivo, ou em outras palavras, após o conteúdo atual, como um "append", a não ser que sejam antes
+#     feitas movimentações no cursor (entenda melhor em 0_IMPORTANTE.py)
 
 ##### Em Resumo, utilizo 'r' quando quero captar dados, 'w' quando quero criar um novo arquivo e escrever nele ou sobreescrever
 ##### um arquivo existente, 'x' com o mesmo primeiro objetivo de w mas com a segurança de que estarei criando um arquivo 
-##### novo e não sobreescrevendo um que já existe e 'a' para manter tudo o que já existe no arquivo mas escrever no final
+##### novo e não sobreescrevendo um que já existe e 'a' para manter tudo o que já existe no arquivo mas escrever mais dados
 
 ##### Também poderia fazer uma abertura com 'r' para captar os dados e outra com 'w' para sobrescrever o arquivo depois que
 ##### guardei suas informações, podendo devolvê-las ao arquivo em outra formatação ou apenas partes junto do incremento
 
-##### Porém, também a outros modos para leitura e escrita que veremos abaixo
+##### Porém, também há outros modos para leitura e escrita que veremos abaixo
 
 ####################
 ##### CONJUTOS #####

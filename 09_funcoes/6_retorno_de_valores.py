@@ -42,3 +42,32 @@ print(f'Os resultados obtidos foram {res1} e {res2}. A soma dos resultados é {r
 # mas sim o dao que estiver no retorno
 
 # OBS: esse dado pode ser de qualquer tipo, não apenas numérico
+
+# Existe também uma maneira de ter mais de um retorno, veja abaixo
+
+nome_completo = 'Rafael Gonçalves'
+
+def separa(nome):
+    nomes = nome.split()
+    primeiro = nomes[0]
+    segundo = nomes[1]
+    return primeiro, segundo
+
+separado = separa(nome_completo)
+print(separado)
+print(f'O primeiro nome é {separado[0]} e o segundo nome é {separado[1]}')
+
+# Acima eu primeiro guardo um nome dentro de uma variável
+# depois defino uma função com argumento
+# em "nomes", guardo uma lista dos nomes que foram separados por split a cada espaço em branco " "
+# capto o indice 0 da lista, referente ao primeiro nome, em "primeiro"
+# capto o indice 1 da lista, referente ao segundo nome, em "segundo"
+# retorno os dois valores
+
+# Ao chamar a função com "nome_completo" como argumento, tudo isso ocorre e os valores são armazenados
+# como lista em "separado", depois só preciso fazer o uso deles chamando a lista[indice]
+
+# poderíamos fazer aqui também o uso de um bloco de for in, ou while, para
+# casos onde algumas pessoas possam possuir dois ou três sobrenomes, e outras
+# apenas um, por exemplo, sem gerar erro de um "terceiro" ou "quarto" fixos
+# que precisam ser preenchidos 

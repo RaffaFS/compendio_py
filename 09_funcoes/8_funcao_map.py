@@ -64,28 +64,10 @@ print(provedores)
 # Existe uma outra maneira de trabalhar com map, passando vários iteráveis
 # ou coleções, vejamos um exemplo
 
-nome = ['Cleiton', 'Giovana', 'Maria', 'José']
+nomes = [Cleiton, Giovana, Maria]
 idade = [30, 19, 25, 28]
-uf = ['RJ', 'SP', 'MS']
+uf = [RJ, SP, MS, SC]
 
-formata = lambda n, i, u: f'{n} tem {i} anos de idade e vive em {u}'
-dados = list(map(formata, nome, idade, uf))
+formata = lambda n, i, u: '{n} tem {i} anos de idade e mora em {u}'
+dados = list(formata, nomes, idade, uf)
 print(dados)
-
-# Nesse caso definimos 3 listas para o exemplo
-# Criamos uma lambda que receberá três argumentos (entenderá depois)
-# e retornará uma frase formatada com os três argumentos reais
-# Definimos então uma variável que armazena em formato de lista 
-# o resultado de um map que aplica a lambda sobre os elementos
-# das listas "nome", "idade" e "uf"
-
-# Mas o que de fato ocorre
-
-# Como já vimos, os valores reais sõ serão processados depois da 
-# chamada da variável que armazena o map, nesse caso pelo print
-
-# Quando isso ocorre, a função "formata" será aplicada em paralelo,
-# ou seja, ao mesmo tempo, no primeiro elemento de cada lista,
-# resultando em 3 retornos simultâneos, por isso temos 3 argumentos
-# na lambda, um para cada retorno ser armazenado temporariamente
-# durante o processo até ser passado para a lista em dados
